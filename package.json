@@ -1,0 +1,49 @@
+{
+  "name": "mz_ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp start",
+    "build": "gulp build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^7.0.1",
+    "gulp-cache": "^1.1.3",
+    "gulp-cleanhtml": "^1.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-html-tag-include": "^1.0.1",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-merge": "^0.1.1",
+    "gulp-nodemon": "^2.4.2",
+    "gulp-remove-empty-lines": "^0.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "gulp.spritesmith-multi": "^3.1.0",
+    "merge-stream": "^2.0.0",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  }
+}
