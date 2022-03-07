@@ -541,7 +541,7 @@ input {
       padding:2.2rem 0;
       padding-right:15rem;
       flex-wrap:wrap;
-      .recruit, 
+      .recruit,
       .newsletter,
       .sns-group {
         margin-right:4rem;
@@ -565,7 +565,7 @@ input {
           b {
             color:$colorPoint;
           }
-        } 
+        }
       }
     }
     .footer-menu {
@@ -741,9 +741,9 @@ input {
   input {
     &[type="radio"],
     &[type="checkbox"] {
-      visibility: hidden; 
-      -webkit-appearance: none; 
-      position: absolute; 
+      visibility: hidden;
+      -webkit-appearance: none;
+      position: absolute;
       left: -10000em;
       & + label {
         margin:.8rem .8rem 0 0;
@@ -784,6 +784,7 @@ input {
   }
 }
 .mainmenu-clone {
+  min-height: 42.7rem;
   padding-top:3.2rem;
   li {
     position:relative;
@@ -1422,7 +1423,7 @@ input {
           }
         }
       }
-      
+
       .like {
         display:flex;
         justify-content:flex-end;
@@ -2538,7 +2539,7 @@ input {
   .hide-mo {
     display:none !important;
   }
-  
+
   .link-under {
     min-height:2.4rem;
     font-size:1.6rem;
@@ -2628,6 +2629,7 @@ input {
     }
   }
   .mainmenu-clone {
+    min-height: auto;
     padding-top:3.6rem;
     li {
       height:5.6rem;
@@ -2684,7 +2686,7 @@ input {
     margin:1.4rem 0 0 0;
     font-size:2.4rem;
     line-height:3rem;
-  }  
+  }
   .sub-tit {
     min-height:auto;
     padding:0;
@@ -3055,7 +3057,7 @@ input {
     font-size:1.4rem;
     line-height:2.1rem;
   }
-  
+
   .form-wrap {
     margin:0 -1rem;
     h2 {
@@ -3129,7 +3131,7 @@ input {
       }
     }
   }
-  
+
   .select-privacy {
     margin-top:2rem;
   }
