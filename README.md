@@ -7,6 +7,10 @@ gulp start
 
 http://localhost:8080/
 
+빌드된 퍼블리싱 파일
+
+http://sypark.dothome.co.kr/workspace/belike/
+
 .
 .
 .
