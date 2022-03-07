@@ -1,0 +1,64 @@
+//$fontBase :helvetica,'애플 SD 산돌고딕 Neo','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','Noto Sans KR',sans-serif;
+$fontBm: 'Hanna';
+$colorPoint:#2AC1BC;
+$colorPoint2:#EB5757;
+$color00: #000;
+$color99: #999;
+$coloraa: #aaa;
+$colordd: #ddd;
+$coloree: #eee;
+$colorfa: #fafafa;
+
+@mixin blind {
+	position:absolute;
+	width:0;
+	height:0;
+	overflow:hidden;
+	z-index:-1;
+}
+@mixin checkbox($size) {
+	input {
+		&[type="radio"],
+		&[type="checkbox"] {
+			visibility: hidden; 
+			-webkit-appearance: none; 
+			position: absolute; 
+			left: -10000px;
+			& + label {
+				position:relative;
+				padding-left: $size + .6 + rem;
+				display:inline-block;
+				&:after {
+					position:absolute;
+					left:0;
+					width: $size + rem;
+					height: $size + rem;
+					display:inline-block;
+					content:'';
+				}
+			}
+		}
+	}
+}
+@mixin spriteImage {
+	position:relative;
+	text-indent:-1000em;
+	overflow:hidden;
+}
+@mixin scrollDesign($track) {
+	&::-webkit-scrollbar {
+		width:6px; 
+		height:6px;
+	}
+	&::-webkit-scrollbar-thumb {
+		-webkit-border-radius:3px;
+		border-radius:3px;
+		background:#ddd;
+		margin-top:20px;
+	}
+	&::-webkit-scrollbar-track {
+		margin:$track 0;
+		padding-right:4px;
+		border-radius:12px;
+	}
+}

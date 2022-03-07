@@ -1,0 +1,134 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-download-name: 'icon-download';
+$icon-download-x: 0px;
+$icon-download-y: 0px;
+$icon-download-offset-x: 0px;
+$icon-download-offset-y: 0px;
+$icon-download-width: 24px;
+$icon-download-height: 24px;
+$icon-download-total-width: 92px;
+$icon-download-total-height: 58px;
+$icon-download-image: '../images/sprite/icon.png';
+$icon-download: (0px, 0px, 0px, 0px, 24px, 24px, 92px, 58px, '../images/sprite/icon.png', 'icon-download', );
+$icon-logout-off-name: 'icon-logout-off';
+$icon-logout-off-x: 34px;
+$icon-logout-off-y: 0px;
+$icon-logout-off-offset-x: -34px;
+$icon-logout-off-offset-y: 0px;
+$icon-logout-off-width: 24px;
+$icon-logout-off-height: 24px;
+$icon-logout-off-total-width: 92px;
+$icon-logout-off-total-height: 58px;
+$icon-logout-off-image: '../images/sprite/icon.png';
+$icon-logout-off: (34px, 0px, -34px, 0px, 24px, 24px, 92px, 58px, '../images/sprite/icon.png', 'icon-logout-off', );
+$icon-logout-on-name: 'icon-logout-on';
+$icon-logout-on-x: 0px;
+$icon-logout-on-y: 34px;
+$icon-logout-on-offset-x: 0px;
+$icon-logout-on-offset-y: -34px;
+$icon-logout-on-width: 24px;
+$icon-logout-on-height: 24px;
+$icon-logout-on-total-width: 92px;
+$icon-logout-on-total-height: 58px;
+$icon-logout-on-image: '../images/sprite/icon.png';
+$icon-logout-on: (0px, 34px, 0px, -34px, 24px, 24px, 92px, 58px, '../images/sprite/icon.png', 'icon-logout-on', );
+$icon-search-off-name: 'icon-search-off';
+$icon-search-off-x: 34px;
+$icon-search-off-y: 34px;
+$icon-search-off-offset-x: -34px;
+$icon-search-off-offset-y: -34px;
+$icon-search-off-width: 24px;
+$icon-search-off-height: 24px;
+$icon-search-off-total-width: 92px;
+$icon-search-off-total-height: 58px;
+$icon-search-off-image: '../images/sprite/icon.png';
+$icon-search-off: (34px, 34px, -34px, -34px, 24px, 24px, 92px, 58px, '../images/sprite/icon.png', 'icon-search-off', );
+$icon-search-on-name: 'icon-search-on';
+$icon-search-on-x: 68px;
+$icon-search-on-y: 0px;
+$icon-search-on-offset-x: -68px;
+$icon-search-on-offset-y: 0px;
+$icon-search-on-width: 24px;
+$icon-search-on-height: 24px;
+$icon-search-on-total-width: 92px;
+$icon-search-on-total-height: 58px;
+$icon-search-on-image: '../images/sprite/icon.png';
+$icon-search-on: (68px, 0px, -68px, 0px, 24px, 24px, 92px, 58px, '../images/sprite/icon.png', 'icon-search-on', );
+$icon-width: 92px;
+$icon-height: 58px;
+$icon-image: '../images/sprite/icon.png';
+$icon-sprites: ($icon-download, $icon-logout-off, $icon-logout-on, $icon-search-off, $icon-search-on, );
+$icon: (92px, 58px, '../images/sprite/icon.png', $icon-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

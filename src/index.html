@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>퍼블리싱 현황판</title>
+	<script src="static/js/jquery-3.4.1.js"></script>
+	<style type="text/css">
+	/* reset */
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0; padding:0; border:0 none;}
+	body,th,td,input,select,textarea,button {font-size:12px; line-height:1.5; font-family:'돋움',dotum,sans-serif; color:#666;}
+
+	article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary, time {display:block;}
+	h1,h2,h3,h4,h5,h6{font-family:"맑은 고딕", "Malgun Gothic"; font-weight:normal;}
+	img, fieldset{border:0 none; vertical-align:middle;}
+	iframe{overflow-x:hidden; overflow-y:hidden; margin:0; padding:0; border:0 none;}
+	dl,ul,ol,menu,li {list-style:none;}
+	blockquote, q {quotes:none;}
+	blockquote:before, blockquote:after ,q:before, q:after {content:''; content:none;}
+	input, select, textarea, label, button{vertical-align:middle;}
+	label, button{cursor:pointer;}
+	button {border:0 none; background-color:transparent; cursor:pointer;}
+	table{border-collapse:collapse; border-spacing:0;}
+
+	caption {visibility:hidden; overflow:hidden; display:none;}
+	legend{position:absolute; top:0; left:0; width:0; height:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0;}
+
+	table {width:100%; }
+	.tit {height:20px; font-size:18px; font-weight:bold; padding:15px 0 10px; text-align:center;}
+	th {height:23px; background-color:#cdcdcd; border:1px solid #b5b5b5; padding:2px 5px 3px; text-align:center; color:#000;}
+	td {border-bottom:1px solid #c9c9c9; border-right:1px solid #c9c9c9; height:15px; padding:2px 10px 3px; font-size:12px; word-break:break-all;}
+	td.first {border-right:1px solid #c9c9c9; border-bottom:2px solid #c9c9c9; font-weight:bold;}
+	td.last {border-bottom:2px solid #c9c9c9;}
+	td:first-child{border-left:1px solid #c9c9c9;}
+
+	a{color:#000; text-decoration:none;}
+	a:hover,a:active,a:focus{color:#000; text-decoration:underline;}
+	.Wrap{width:1200px; padding:20px; margin:0 auto;}
+	.font_01 {color:#a1a1a1;}
+	.font_02 {font-weight:bold;}
+	.font_03 {color:#00f;}
+	.font_04 {color:#f00;}
+	.font_05{color:#909; font-weight:bold;}
+	.gride{}
+	.gride table{border:none;}
+	.del td{text-decoration:line-through; color:#ababab; background: #f1f1f1;}
+	.del td:last-child{text-decoration: none;}
+	.del td.txt{color:#666; text-decoration:none;}
+	.dec{text-align:right; width:1705px;}
+	.point_bg{background:#FF9;}
+	.type_guide{padding:10px; background:#ac1846;  text-align:center; font-size:14px; font-weight:bold;}
+	.type_guide a {color:#fff;}
+	.red {background:#666;}
+	.red > td {color:#CCC;}
+	.yellow {color:yellow}
+	.new {background:yellow;}
+	tr.modify { background:#e2f1ff; }
+	tr.modify td { color:#002446;}
+	tr.hr td { border-top:5px solid #c9c9c9;}
+	span.ico {display:inline-block; font-size:10px; font-family:Myriad, Verdana; line-height:1; padding:4px; background:#666; color:#fff; border-radius:3px;}
+	span.ico.ing { background:#30F;}
+	span.ico.done { background:#C0C;}
+	span.ico.modify { background:#C39;}
+	.tac{text-align: center;}
+	.tbl-top{line-height: 26px; padding-bottom: 10px;}
+	.tbl-top:after{display: block; content: ''; clear: both;}
+	.tbl-top .fl{float: left;}
+	.tbl-top .fr{float: right;}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$(".table colgroup").prepend("<col width='50px' />");
+			$(".table thead tr").prepend("<th scope='col'>No</th>");
+			for(i=0; i <= $(".table tbody tr").length; i++)
+			$(".table tbody tr:nth-child("+ i+")").prepend("<td class='tac'>"+i+"</td>");
+		});
+	</script>
+</head>
+
+<body>
+
+<div class="Wrap">
+	<div class="tit">퍼블리싱 현황판</div>
+	<div class="tbl-top">
+		<div class="fl">
+
+		</div>
+		<div class="fr">
+			T : 탭,  L : 레이어 팝업, W : 윈도우 팝업
+		</div>
+	</div>
+	<table class="table">
+		<caption>퍼블리싱 메뉴 구조</caption>
+		<colgroup>
+			<col width="100px" />
+			<col width="140px" />
+			<col width="180px" />
+			<col width="170px" />
+			<col width="120px" />
+			<col width="40px" />
+			<col width="200px" />
+			<col width="*" />
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">Depth 1</th>
+				<th scope="col">Depth 2</th>
+				<th scope="col">Depth 3</th>
+				<th scope="col">Depth 4</th>
+				<th scope="col">Depth 5</th>
+				<th scope="col">T/L</th>
+				<th scope="col">파일명</th>
+				<th scope="col">Comment</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>메인</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/main.html" target="_blank">main.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>잘 먹고</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/eat.html" target="_blank">eat.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>일 잘 하고</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/work.html" target="_blank">work.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>함께 잘 살자</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/together.html" target="_blank">together.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>상세</td>
+				<td>토스트 메세지 추가</td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/detail.html" target="_blank">detail.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>검색결과</td>
+				<td>태그 검색결과</td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/search-result2.html" target="_blank">search-result2.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>에디터 검색결과</td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/search-result.html" target="_blank">search-result.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>검색결과 없음</td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/search-result3.html" target="_blank">search-result3.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>구독신청</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/mailing.html" target="_blank">mailing.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>유효성 체크 에러일 경우 + 비활성화 예시 화면</td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/mailing-error.html" target="_blank">mailing-error.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>구독신청 확인 팝업</td>
+				<td></td>
+				<td></td>
+				<td align="center">L</td>
+				<td><a href="html/mailing-popup.html" target="_blank">mailing-popup.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>구독신청 완료페이지</td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/system-mailing.html" target="_blank">system-mailing.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>구독취소</td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/mailing-cancel.html" target="_blank">mailing-cancel.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>구독취소 확인 팝업</td>
+				<td></td>
+				<td></td>
+				<td align="center">L</td>
+				<td><a href="html/mailing-cancel-popup.html" target="_blank">mailing-cancel-popup.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>시스템</td>
+				<td>링크 만료</td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/system-end.html" target="_blank">system-end.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>에러 페이지</td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/system-error.html" target="_blank">system-error.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>개인정보처리방침</td>
+				<td>시행안이 2개 이상인 경우 : 셀렉트 박스 노출</td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/privacy/policy.html" target="_blank">privacy/policy.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>시행안이 1개인 경우 : 셀렉트 박스 숨김</td>
+				<td></td>
+				<td></td>
+				<td align="center"></td>
+				<td><a href="html/privacy/policy-210525.html" target="_blank">privacy/policy-210525.html</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- START :: 수정 내역 -->
+
+</div>
+</body>
+</html>

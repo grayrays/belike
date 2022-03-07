@@ -1,0 +1,52 @@
+<include src="../include/header.html" root=".." title="배민다움"></include>
+	<main class="container">
+		<div class="content">
+      <!-- START :: 구독 신청 -->
+      <div class="form-wrap">
+        <h2>구독취소</h2>
+        <p class="tit-add">아직 더 많은 이야기가 남아있는데..ㅠㅠ</p>
+        <div class="form-box">
+          <ul>
+            <li>
+              <label for="emailAddress">이메일 주소</label>
+              <input type="email" id="mailAddress" />
+              <!--
+              //비활성화 disabled 속성일 경우
+              <input type="text" value="인풋박스 비활성화" disabled />
+              //유효성 체크 에러일 경우 has-error 클래스 추가
+              <input type="email" value="유효성 에러" class="has-error" />
+              <p class="has-error">유효성 검사</p>
+              -->
+            </li>
+          </ul>
+          <div class="btn-area full">
+            <a href="#none" class="bt-large">구독취소하기</a>
+          </div>
+        </div>
+      </div>
+      <!-- //END :: 구독 신청 -->
+		</div>
+	</main>
+	<!-- //END :: container -->
+<include src="../include/footer.html" root=".."></include>
+<script>
+$(function(){
+  $('.form-box .bt-large').click(function(e){
+    $('.popup-wrapper').addClass('show');
+    e.preventDefault();
+  });
+});
+</script>
+<!-- popup -->
+<div class="popup-wrapper">
+  <div class="popup-inner">
+    <section class="popup-alert">
+      <h2>구독취소가 완료되었습니다.<br />다음에 다시 만나요~</h2>
+      <div class="btn-area">
+        <a href="javascript:;" onclick="$(this).parents('.popup-wrapper').removeClass('show');" class="bt-large">확인</a>
+      </div>
+    </section>
+  </div>
+</div>
+</body>
+</html>

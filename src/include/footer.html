@@ -1,0 +1,118 @@
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-link">
+        <div class="recruit">
+          <p><b>우아한형제들</b>과 함께 일해보고 싶다면?</p>
+          <a href="#none" class="bt-base">지원하러가기</a>
+        </div>
+        <div class="newsletter">
+          <p><b>배민다움</b> 소식을 계속 받아보고 싶다면?</p>
+          <a href="#none" class="bt-base">구독하러가기</a>
+        </div>
+      </div>
+      <div class="footer-menu">
+        <div class="f-menu">
+          <section class="like">
+            <h2><img src="@@root/static/images/foot_logo_b.png" alt="배민다움" /></h2>
+            <ul>
+              <li><a href="#none">배민다움소개</a></li>
+              <li><a href="#none">잘 먹고</a></li>
+              <li><a href="#none">일 잘하고</a></li>
+              <li><a href="#none">함께 잘 살자</a></li>
+            </ul>
+          </section>
+          <section class="woowahan">
+            <h2><img src="@@root/static/images/foot_logo_w.png" alt="우아한형제들" /></h2>
+            <ul>
+              <li><a href="#none">우아한닷컴</a></li>
+              <li><a href="#none">기술 블로그</a></li>
+              <li><a href="#none">우아한 크리에이티브</a></li>
+              <li><a href="#none">주간 배짱이</a></li>
+            </ul>
+          </section>
+        </div>
+        <ul class="sns-group">
+          <li><a href="#none"><img src="@@root/static/images/sns_instagram.png" alt="인스타그램" /></a></li>
+          <li><a href="#none"><img src="@@root/static/images/sns_yutube.png" alt="유튜브" /></a></li>
+          <li><a href="#none"><img src="@@root/static/images/sns_facebook.png" alt="패이스북" /></a></li>
+        </ul>
+        <div class="site-info">
+          <!--
+          <a href="#none" class="a-link">개인정보처리방침</a>
+          -->
+          <span class="service-center">고객센터 : 1600-7001</span>
+          <p class="copyright">© <b>Woowa Brothers Corp.</b> All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="../static/js/swiper-bundle.min.js"></script>
+<script>
+  var $mainBannerCheck=$('.main-banner');
+  var swiperMo = undefined;
+  var swiperWeb = undefined;
+  function initSwiper() {
+    var winW = $(window).outerWidth();
+    var checkMo = 750;
+    if ($mainBannerCheck.length){
+      if (winW < checkMo && swiperMo == undefined){
+        if (swiperWeb !== undefined) {
+          swiperWeb.destroy(false, true);
+          swiperWeb = undefined;
+        }
+        swiperMo = new Swiper('.main-banner', {
+          // Default parameters
+          slidesPerView: "auto",
+          speed: 600,
+          spaceBetween: 0,
+        });
+      } else if(winW >= checkMo && swiperWeb == undefined) {
+        if (swiperMo !== undefined) {
+          swiperMo.destroy(false, true);
+          swiperMo = undefined;
+        }
+        swiperWeb = new Swiper('.main-banner', {
+          slidesPerView: 1,
+          speed: 600,
+          spaceBetween: 0,
+          loop: true,
+          allowTouchMove: false, //20210617 swiper 옵션 추가
+          navigation: {
+            nextEl: '.main-banner .bt-next',
+            prevEl: '.main-banner .bt-prev',
+          },
+          pagination: {
+            el: '.main-banner .pagination',
+            clickable: true,
+          },
+        });
+      }
+    }
+  }
+  initSwiper();
+  $(window).on('resize', function(){
+    initSwiper();
+  });
+  var swiperList = $('.editor-recommend').find('.editor-list li');
+  var swiperOptions = {
+    slidesPerView: 5,
+    slidesPerGroup: 5,
+    spaceBetween: 0,
+    loop: true,
+    navigation: {
+      nextEl: '.editor-recommend .bt-next',
+      prevEl: '.editor-recommend .bt-prev',
+    },
+    pagination: {
+      el : '.editor-recommend .pagination',
+      type: 'fraction',
+    }
+  }
+  if (swiperList.length <= 5) {
+    $('.editor-recommend').addClass('no-slide');
+  } else {
+    const swiper = new Swiper('.editor-list-wrapper', swiperOptions);
+  }
+</script>

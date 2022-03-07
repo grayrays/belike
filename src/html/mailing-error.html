@@ -1,0 +1,82 @@
+<include src="../include/header.html" root=".." title="배민다움"></include>
+	<main class="container">
+		<div class="content">
+      <!-- START :: 구독 신청 -->
+      <div class="form-wrap">
+        <h2>배민다움 소식을<br />제일 먼저 받아보세요!</h2>
+        <div class="form-box">
+          <ul>
+            <li>
+              <label for="emailAddress">이메일 주소</label>
+              <input type="email" id="mailAddress" class="has-error" />
+              <p class="has-error">유효성 검사</p>
+              <!--
+              //비활성화 disabled 속성일 경우
+              <input type="text" value="인풋박스 비활성화" disabled />
+              //유효성 체크 에러일 경우 has-error 클래스 추가
+              <input type="email" value="유효성 에러" class="has-error" />
+              <p class="has-error">유효성 검사</p>
+              -->
+            </li>
+            <li>
+              <label for="mailName">닉네임</label>
+              <input type="text" id="mailName" value="비활성화일 경우" disabled />
+            </li>
+          </ul>
+          <div class="agree-area">
+            <div class="check-box">
+              <input type="checkbox" id="mailAgree" /><label for="mailAgree">개인정보 수집 및 이용에 동의합니다.</label>
+            </div>
+            <!-- radio는 type 변경 후 사용
+            <div class="check-box">
+              <input type="radio" id="mailAgree2" /><label for="mailAgree2">개인정보 수집 및 이용에 동의합니다.</label>
+            </div>
+            -->
+            <div class="agree-content">
+              <!-- START :: 개인정보 수집 및 이용 동의 컨텐츠
+                :: 컨텐츠 분량이 늘어나거나 공통 관리가 필요한 작업이 생기면 여기부터 분리하여 아이프레임으로 작업할 예정입니다.
+              -->
+              <div class="agree-box">
+                (주)우아한형제들은 아래와 같이 개인정보를 수집 이용합니다.<br /><br />
+                수집 이용 항목 : 닉네임, 이메일주소<br />
+                수집 이용 목적 : 배민다움 구독 서비스 제공, 이용자 식별, 민원처리 및 고객상담, 고지사항 전달, 불법 및 부정이용 방지, 서비스 만족도 조사 및 관리 
+                보유 및 이용기간 : 구독 취소시까지 <b>(단, 구독신청 후 메일 인증이 완 료되지 않은 경우 신청 7일 후 파기됩니다.)</b><br />
+                위 개인정보 수집 이용에 동의하지 않으실 수 있으며, 동의하지 않는 경우 구독신청 이 제한됩니다.
+              </div>
+              <!-- //END :: 개인정보 수집 및 이용 동의 컨텐츠-->
+            </div>
+          </div>
+          <div class="btn-area full">
+            <a href="#none" class="bt-large">구독하기</a>
+          </div>
+        </div>
+      </div>
+      <!-- //END :: 구독 신청 -->
+		</div>
+	</main>
+	<!-- //END :: container -->
+<include src="../include/footer.html" root=".."></include>
+<script>
+$(function(){
+  $('.form-box .bt-large').click(function(e){
+    $('.popup-wrapper').addClass('show');
+    e.preventDefault();
+  });
+});
+</script>
+<!-- popup -->
+<div class="popup-wrapper">
+  <div class="popup-inner">
+    <section class="popup-alert">
+      <h2>입력하신 이메일 주소 <strong class="email">woowafriends@woowa.com</strong>로 확인 메일을 보내드렸습니다.</h2>
+      <div class="popup-content">
+        메일에서 구독하기 버튼을 누르면<br />구독신청이 완료됩니다.
+      </div>
+      <div class="btn-area">
+        <a href="javascript:;" onclick="$(this).parents('.popup-wrapper').removeClass('show');" class="bt-large">확인</a>
+      </div>
+    </section>
+  </div>
+</div>
+</body>
+</html>

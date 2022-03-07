@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>@@title</title>
+    <!-- css -->
+    <link rel="stylesheet" href="@@root/static/css/layout.css" />
+		<script src="@@root/static/js/jquery-3.4.1.js"></script>
+		<script src="@@root/static/js/publish.js"></script>
+</head>
+<body>
+<div class="bmlike-wrap@@main"> <!-- 상세 페이지일 경우 b-detail 클래스 추가 -->
+	<!-- START :: header -->
+	<header class="header">
+		<div class="gnb-wrapper">
+			<div class="gnb">
+				<h1 class="logo@@logo"><a href="@@root/html/main.html"><img src="@@root/static/images/logo.png" alt="배민다움" /></a></h1> <!-- 20210528 클래스 추가 -->
+				<a href="#none" class="bt-prev-mo hide-pc">이전</a> <!-- 20210528 버튼 추가 -->
+				<div class="mainmenu">
+					<ul>
+						<li class="eat active">
+							<a href="@@root/html/eat.html" class="ani-typing">잘 먹고</a>
+							<small>좋은 음식을 먹고 싶은 곳에서</small>
+						</li>
+						<li class="work">
+							<a href="@@root/html/work.html" class="ani-typing">일 잘하고</a>
+							<small>쉽고, 명확하고, 위트있게</small>
+						</li>
+						<li class="together">
+							<a href="@@root/html/together.html" class="ani-typing">함께 잘 살자</a>
+							<small>콩 한 쪽도 나눠 먹으랬으니까</small>
+						</li>
+					</ul>
+					<div class="menu-bg"></div>
+				</div>
+				<div class="etc-menu">
+					<a href="#" class="bt-base@@apply">지원하러가기</a> <!-- 20210528 클래스 추가 -->
+					<a href="#" class="bt-search">검색</a>
+				</div>
+				<p class="bt-menu"><a href="#none"><span>메뉴</span></a></p>
+			</div>
+		</div>
+	</header>
+	<!-- //END :: header -->
+	<!-- START :: 검색창 -->
+	<div class="layer-search">
+		<div class="search-wrap"><!-- 20210528 search-wrap 레이어 추가 -->
+			<div class="search-area"> 
+				<form>
+					<div class="search-box">
+						<input type="search" placeholder="검색어를 입력해주세요." />
+						<input type="reset" class="bt-reset" />
+						<input type="submit" id="searchsubmit" class="bt-search">
+						<!--
+						<button class="bt-search"></button>
+						-->
+					</div>
+				</form>
+				<div class="search-content"> <!-- 20210528 search-content 레이어 추가 -->
+					<section class="search-tag">
+						<h3>태그로 찾기</h3>
+						<div class="hash-tag">
+							<span><input type="radio" name="hashTag2" id="tag2-1" checked /><label for="tag2-1">로봇</label></span>
+							<span><input type="radio" name="hashTag2" id="tag2-2" /><label for="tag2-2">배민그린</label></span>
+							<span><input type="radio" name="hashTag2" id="tag2-3" /><label for="tag2-3">배민다움</label></span>
+							<span><input type="radio" name="hashTag2" id="tag2-4" /><label for="tag2-4">용기있는배짱이</label></span>
+							<span><input type="radio" name="hashTag2" id="tag2-5" /><label for="tag2-5">배티비</label></span>
+							<span><input type="radio" name="hashTag2" id="tag2-6" /><label for="tag2-6">우아한문화</label></span>
+							<span><input type="radio" name="hashTag2" id="tag2-7" /><label for="tag2-7">푸드테크</label></span>
+							<span><input type="radio" name="hashTag2" id="tag2-8" /><label for="tag2-8">채용</label></span>
+							<span><input type="radio" name="hashTag2" id="tag2-9" /><label for="tag2-9">문화</label></span>
+							<span><input type="radio" name="hashTag2" id="tag2-10" /><label for="tag2-10">로봇딜리</label></span>
+							<!--
+							<span><input type="checkbox" id="tag-11" /><label for="tag-11">라디오박스테스트</label></span>
+							<a href="#none" class="active">로봇</a>
+							<a href="#none">배민그린</a>
+							-->
+						</div>
+					</section>
+					<section class="search-editor">
+						<h3>에디터로 찾기</h3>
+						<ul class="editor-list">
+							<li>
+								<a href="#none">
+									<p class="thumbs"><img src="@@root/static/images/test/editor-img1.png" alt="우아한" /></p>
+									<dl>
+										<dt>우아한</dt>
+										<dd>배민사장님마케팅파트배민사장님zz</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p class="thumbs"><img src="@@root/static/images/test/editor-img2.png" alt="우아한" /></p>
+									<dl>
+										<dt>우아한</dt>
+										<dd>배민사장님마케팅파트</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p class="thumbs"><img src="@@root/static/images/test/editor-img3.png" alt="우아한" /></p>
+									<dl>
+										<dt>우아한</dt>
+										<dd>배민사장님마케팅파트</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p class="thumbs"><img src="@@root/static/images/test/editor-img4.png" alt="우아한" /></p>
+									<dl>
+										<dt>우아한</dt>
+										<dd>배민사장님마케팅파트</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p class="thumbs"><img src="@@root/static/images/test/editor-img5.png" alt="우아한" /></p>
+									<dl>
+										<dt>우아한</dt>
+										<dd>배민사장님마케팅파트</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p class="thumbs"><img src="@@root/static/images/test/editor-img6.png" alt="우아한" /></p>
+									<dl>
+										<dt>우아한</dt>
+										<dd>배민사장님마케팅파트</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p class="thumbs"><img src="@@root/static/images/test/editor-img7.png" alt="우아한" /></p>
+									<dl>
+										<dt>우아한</dt>
+										<dd>배민사장님마케팅파트</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p class="thumbs"><img src="@@root/static/images/test/editor-img8.png" alt="우아한" /></p>
+									<dl>
+										<dt>우아한</dt>
+										<dd>배민사장님마케팅파트</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<p class="thumbs"><img src="@@root/static/images/test/editor-img9.png" alt="우아한" /></p>
+									<dl>
+										<dt>우아한</dt>
+										<dd>배민사장님마케팅파트</dd>
+									</dl>
+								</a>
+							</li>
+						</ul>
+						<div class="btn-area hide-pc"> <!-- 20210525 hide-pc 클래스 추가 -->
+							<a href="#none" class="bt-more">더보기</a>
+						</div>
+					</section>
+				</div>
+			</div>
+			<a href="#none" class="close">닫기</a>
+		</div>
+	</div>
+	<!-- //END :: 검색창 -->
